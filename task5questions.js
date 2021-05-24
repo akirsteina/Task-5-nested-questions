@@ -72,7 +72,7 @@ const askQuestion5 = async() => {
 try {
     accessSync(filePath);
     const jsonObject = readFileSync(filePath, 'utf8');
-    const profile = JSON.parse(jsonObject);
+
 
     const firstName = await askQuestion1();
     const lastName = await askQuestion2();
@@ -88,8 +88,8 @@ try {
         address: address
     }
 
-    profile.push(newLogEntry);
-    writeFileSync(filePath, JSON.stringify(profile));
+
+    writeFileSync(filePath, JSON.stringify(newLogEntry));
 
     console.log(`Data. First name: ${firstName}, last name: ${lastName}, email: ${email}, age: ${age}, address: ${address}`)
 } catch (e) {

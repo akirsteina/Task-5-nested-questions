@@ -8,5 +8,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akirsteina/Task-5-nested-questions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akirsteina/Task-5-nested-questions/issues"
+  },
+  "homepage": "https://github.com/akirsteina/Task-5-nested-questions#readme",
   "description": ""
 }
