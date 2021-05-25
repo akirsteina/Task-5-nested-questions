@@ -52,7 +52,8 @@ const askQuestion4 = async() => {
                 reject('Age has to be over zero and a number');
                 return;
             }
-            fulfill(age);
+            const integerAge = parseInt(age);
+            fulfill(integerAge);
         })
     })
 }
@@ -81,16 +82,14 @@ try {
     const address = await askQuestion5();
 
     const newLogEntry = {
-        first_name: firstName,
-        last_name: lastName,
-        email: email,
-        age: age,
-        address: address
+        firstName,
+        lastName,
+        email,
+        age,
+        address
     }
 
-
     writeFileSync(filePath, JSON.stringify(newLogEntry));
-
     console.log(`Data. First name: ${firstName}, last name: ${lastName}, email: ${email}, age: ${age}, address: ${address}`)
 } catch (e) {
     console.log(`Whoops, something went wrong. The error is: ${e}`);
