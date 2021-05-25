@@ -1,5 +1,5 @@
 import readline from 'readline';
-import { accessSync, readFileSync, writeFileSync } from 'fs';
+import { accessSync, writeFileSync } from 'fs';
 
 const filePath = `${process.cwd()}/signups.json`;
 
@@ -72,8 +72,6 @@ const askQuestion5 = async() => {
 
 try {
     accessSync(filePath);
-    const jsonObject = readFileSync(filePath, 'utf8');
-
 
     const firstName = await askQuestion1();
     const lastName = await askQuestion2();
